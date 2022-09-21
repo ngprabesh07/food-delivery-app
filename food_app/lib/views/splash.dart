@@ -4,6 +4,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:food_app/views/homepage.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:food_app/widgets/navbar.dart';
 
 class Splash extends StatefulWidget {
   const Splash({Key? key}) : super(key: key);
@@ -22,7 +23,7 @@ class _SplashState extends State<Splash> {
         () => Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-              builder: (context) => HomePage(),
+              builder: (context) => NavBar(),
             )));
   }
 

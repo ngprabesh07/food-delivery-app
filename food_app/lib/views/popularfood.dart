@@ -9,18 +9,28 @@ class PopularFood extends StatelessWidget {
       height: 300,
       child: SingleChildScrollView(
         child: Column(children: [
+          Text(
+            "Popular Food Items :",
+            style: TextStyle(
+                fontSize: 20, fontWeight: FontWeight.bold, color: Colors.blue),
+          ),
           Card(
             child: Row(
               children: [
-                Container(
-                  height: 80,
-                  width: 80,
-                  // color: Colors.orange,
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage('assets/images/nutrition.jpeg'))),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Container(
+                    height: 80,
+                    width: 80,
+                    // color: Colors.orange,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage('assets/images/nutrition.jpeg'))),
+                  ),
                 ),
-                SizedBox(width: 10,),
+                SizedBox(
+                  width: 10,
+                ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -29,9 +39,12 @@ class PopularFood extends StatelessWidget {
                       style: TextStyle(
                           color: Colors.orange, fontWeight: FontWeight.bold),
                     ),
-                    Text("with chinese cook",style: TextStyle(
-                      fontSize: 14,
-                          color: Colors.grey, fontWeight: FontWeight.bold),
+                    Text(
+                      "with chinese cook",
+                      style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.grey,
+                          fontWeight: FontWeight.bold),
                     ),
                     Row(
                       children: [
@@ -63,15 +76,20 @@ class PopularFood extends StatelessWidget {
           Card(
             child: Row(
               children: [
-                Container(
-                  height: 80,
-                  width: 80,
-                  // color: Colors.orange,
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage('assets/images/sweet.jpeg'))),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Container(
+                    height: 80,
+                    width: 80,
+                    // color: Colors.orange,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage('assets/images/sweet.jpeg'))),
+                  ),
                 ),
-                SizedBox(width: 10,),
+                SizedBox(
+                  width: 10,
+                ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -80,9 +98,12 @@ class PopularFood extends StatelessWidget {
                       style: TextStyle(
                           color: Colors.orange, fontWeight: FontWeight.bold),
                     ),
-                    Text("with american cook hehe",style: TextStyle(
-                      fontSize: 14,
-                          color: Colors.grey, fontWeight: FontWeight.bold),
+                    Text(
+                      "with american cook hehe",
+                      style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.grey,
+                          fontWeight: FontWeight.bold),
                     ),
                     Row(
                       children: [
@@ -114,15 +135,20 @@ class PopularFood extends StatelessWidget {
           Card(
             child: Row(
               children: [
-                Container(
-                  height: 80,
-                  width: 80,
-                  // color: Colors.orange,
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage('assets/images/vegan.jpeg'))),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Container(
+                    height: 80,
+                    width: 80,
+                    // color: Colors.orange,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage('assets/images/vegan.jpeg'))),
+                  ),
                 ),
-                SizedBox(width: 10,),
+                SizedBox(
+                  width: 10,
+                ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -131,9 +157,12 @@ class PopularFood extends StatelessWidget {
                       style: TextStyle(
                           color: Colors.orange, fontWeight: FontWeight.bold),
                     ),
-                    Text("with chinese cook",style: TextStyle(
-                      fontSize: 14,
-                          color: Colors.grey, fontWeight: FontWeight.bold),
+                    Text(
+                      "with chinese cook",
+                      style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.grey,
+                          fontWeight: FontWeight.bold),
                     ),
                     Row(
                       children: [

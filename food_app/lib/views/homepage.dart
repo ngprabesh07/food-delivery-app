@@ -9,6 +9,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // backgroundColor: Color.fromARGB(255, 241, 216, 184),
         appBar: AppBar(
           elevation: 0,
           centerTitle: true,
@@ -56,7 +57,7 @@ class HomePage extends StatelessWidget {
                           children: [
                             Container(
                               height: 250,
-                              color: Colors.orange,
+                              color: Colors.white,
                               // decoration: BoxDecoration(
                               //     image: DecorationImage(
                               //   image: AssetImage('assets/images/glasses.png'),
@@ -80,7 +81,7 @@ class HomePage extends StatelessWidget {
                           child: Container(
                             width: 240,
                             height: 110,
-                            color: Colors.white,
+                            color: Color.fromARGB(255, 238, 191, 120),
                             child: Padding(
                               padding: const EdgeInsets.all(15.0),
                               child: Column(
@@ -147,7 +148,7 @@ class HomePage extends StatelessWidget {
                           children: [
                             Container(
                               height: 250,
-                              color: Colors.orange,
+                              color: Colors.white,
                               // decoration: BoxDecoration(
                               //     image: DecorationImage(
                               //   image: AssetImage('assets/images/glasses.png'),
@@ -171,7 +172,7 @@ class HomePage extends StatelessWidget {
                           child: Container(
                             width: 240,
                             height: 110,
-                            color: Colors.white,
+                            color: Color.fromARGB(255, 238, 191, 120),
                             child: Padding(
                               padding: const EdgeInsets.all(15.0),
                               child: Column(
@@ -238,7 +239,7 @@ class HomePage extends StatelessWidget {
                           children: [
                             Container(
                               height: 250,
-                              color: Colors.orange,
+                              color: Colors.white,
                               // decoration: BoxDecoration(
                               //     image: DecorationImage(
                               //   image: AssetImage('assets/images/glasses.png'),
@@ -262,7 +263,7 @@ class HomePage extends StatelessWidget {
                           child: Container(
                             width: 240,
                             height: 110,
-                            color: Colors.white,
+                            color: Color.fromARGB(255, 238, 191, 120),
                             child: Padding(
                               padding: const EdgeInsets.all(15.0),
                               child: Column(
@@ -329,7 +330,7 @@ class HomePage extends StatelessWidget {
                           children: [
                             Container(
                               height: 250,
-                              color: Colors.orange,
+                              color: Colors.white,
                               // decoration: BoxDecoration(
                               //     image: DecorationImage(
                               //   image: AssetImage('assets/images/glasses.png'),
@@ -353,7 +354,7 @@ class HomePage extends StatelessWidget {
                           child: Container(
                             width: 240,
                             height: 110,
-                            color: Colors.white,
+                            color: Color.fromARGB(255, 238, 191, 120),
                             child: Padding(
                               padding: const EdgeInsets.all(15.0),
                               child: Column(
@@ -428,6 +429,7 @@ class HomePage extends StatelessWidget {
               SizedBox(height: 20,),
 
                 PopularFood(),
+
               ],
             ),
           ),
