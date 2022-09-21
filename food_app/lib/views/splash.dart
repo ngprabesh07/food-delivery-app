@@ -42,50 +42,54 @@ class _SplashState extends State<Splash> {
       backgroundColor: Colors.orange,
       body: Padding(
         padding: const EdgeInsets.only(top: 170),
-        child: Column(
-          children: [
-            Image.asset('assets/images/delivery.png'),
-            Center(
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  const SizedBox(
-                    width: 20,
-                    height: 100,
-                  ),
-                  
-                  const SizedBox(
-                    width: 20,
-                    height: 100,
-                  ),
-                  DefaultTextStyle(
-                      style: const TextStyle(
-                        fontSize: 40,
-                        fontFamily: 'Horizontal',
-                      ),
-                      child: AnimatedTextKit(
-                        isRepeatingAnimation: false,
-                        animatedTexts: [
-                          TyperAnimatedText("SAMDI FOOD DELIVERY"),
-                          TyperAnimatedText("Serve on ONE CLICK !"),
-                          // WavyAnimatedText("SAMDI FOOD DELIVERY")
-                          // ColorizeAnimatedText("PRABESH",
-                          //     textStyle: colorizeTextStyle, colors: colorizeColors),
-                          //   RotateAnimatedText("SAMDI"),
-                          // RotateAnimatedText("ONLINE"),
-                          // RotateAnimatedText("FOOD"),
-                          // RotateAnimatedText("DELIVERY"),
-                        ],
-                        onTap: () {
-                          print("Tap Tap");
-                        },
-                      ))
-                ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Image.asset('assets/images/delivery.png'),
+              Center(
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const SizedBox(
+                      width: 20,
+                      height: 100,
+                    ),
+                    
+                    const SizedBox(
+                      width: 20,
+                      height: 100,
+                    ),
+                    DefaultTextStyle(
+                        style: const TextStyle(
+                          fontSize: 30,
+                          fontFamily: 'Horizontal',
+                        ),
+                        child: AnimatedTextKit(
+                          isRepeatingAnimation: false,
+                          animatedTexts: [
+                            TyperAnimatedText("SAMDI FOOD DELIVERY"),
+                            TyperAnimatedText("Serve on ONE CLICK !"),
+                            // WavyAnimatedText("SAMDI FOOD DELIVERY")
+                            // ColorizeAnimatedText("PRABESH",
+                            //     textStyle: colorizeTextStyle, colors: colorizeColors),
+                            //   RotateAnimatedText("SAMDI"),
+                            // RotateAnimatedText("ONLINE"),
+                            // RotateAnimatedText("FOOD"),
+                            // RotateAnimatedText("DELIVERY"),
+                          ],
+                          onTap: () {
+                            print("Tap Tap");
+                          },
+                        ))
+                  ],
+                ),
               ),
-            ),
-            const SizedBox(height: 200,),
-            CircularProgressIndicator(),
-          ],
+              const SizedBox(height: 100,),
+              CircularProgressIndicator(
+                color: Colors.red,
+              ),
+            ],
+          ),
         ),
       ),
     );
