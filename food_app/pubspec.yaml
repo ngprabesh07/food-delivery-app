@@ -23,6 +23,7 @@ dependencies:
   syncfusion_flutter_maps: ^20.2.50
   location: ^4.4.0
   dotted_border: ^2.0.0+2
+  path_drawing: ^1.0.1
   
   
   
