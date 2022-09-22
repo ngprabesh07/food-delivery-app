@@ -1,8 +1,8 @@
 import 'dart:async';
-import 'dart:ui';
+
 
 import 'package:flutter/material.dart';
-import 'package:food_app/views/homepage.dart';
+
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:food_app/widgets/navbar.dart';
 import 'package:get/get.dart';
@@ -17,7 +17,7 @@ class Splash extends StatefulWidget {
 class _SplashState extends State<Splash> {
   @override
   void initState() {
-    // TODO: implement initState
+   
     super.initState();
     Timer(
         Duration(seconds: 6),
@@ -29,17 +29,17 @@ class _SplashState extends State<Splash> {
   }
 
   Widget build(BuildContext context) {
-    const colorizeColors = [
-      Colors.purple,
-      Colors.blue,
-      Colors.yellow,
-      Colors.red,
-    ];
+    // const colorizeColors = [
+    //   Colors.purple,
+    //   Colors.blue,
+    //   Colors.yellow,
+    //   Colors.red,
+    // ];
 
-    const colorizeTextStyle = TextStyle(
-      fontSize: 50.0,
-      fontFamily: 'Horizon',
-    );
+    // const colorizeTextStyle = TextStyle(
+    //   fontSize: 50.0,
+    //   fontFamily: 'Horizon',
+    // );
     return Scaffold(
       backgroundColor: Colors.orange,
       body: Padding(

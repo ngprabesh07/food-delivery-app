@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/views/homepage.dart';
-import 'package:food_app/views/map.dart';
-import 'package:food_app/views/osm.dart';
+// import 'package:food_app/views/map.dart';
+import 'package:food_app/views/mapscreen.dart';
+// import 'package:food_app/views/osm.dart';
 
 class NavBar extends StatefulWidget {
   const NavBar({super.key});
@@ -17,7 +18,8 @@ class _NavBarState extends State<NavBar> {
   static const List<Widget> _widgetOptions = <Widget>[
     HomePage(),
     // MapScreen(),
-    Osm(),
+    // Osm(),
+    PrabeshMap(),
     Text(
       'Profile',
       style: optionStyle,

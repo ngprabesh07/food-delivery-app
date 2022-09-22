@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:latlong2/latlong.dart';
-import 'package:location/location.dart';
+
 import 'package:syncfusion_flutter_maps/maps.dart';
 
 class MapScreen extends StatefulWidget {
