@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:food_app/views/homepage.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:food_app/widgets/navbar.dart';
+import 'package:get/get.dart';
 
 class Splash extends StatefulWidget {
   const Splash({Key? key}) : super(key: key);
@@ -69,7 +70,7 @@ class _SplashState extends State<Splash> {
                           isRepeatingAnimation: false,
                           animatedTexts: [
                             TyperAnimatedText("SAMDI FOOD DELIVERY"),
-                            TyperAnimatedText("Serve on ONE CLICK !"),
+                            TyperAnimatedText("SERVE".tr),
                             // WavyAnimatedText("SAMDI FOOD DELIVERY")
                             // ColorizeAnimatedText("PRABESH",
                             //     textStyle: colorizeTextStyle, colors: colorizeColors),

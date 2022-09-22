@@ -1,20 +1,37 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:get/get.dart';
 
+import '../widgets/dailog.dart';
+import 'burger.dart';
 import 'popularfood.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
   @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  var data = Get.arguments;
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: Color.fromARGB(255, 241, 216, 184),
+        // backgroundColor: Color.fromARGB(255, 241, 216, 184),
         appBar: AppBar(
+          actions: [
+            IconButton(
+              icon: Icon(Icons.language),
+              onPressed: () {
+                buildLanguageDialog(context);
+              },
+            ),
+          ],
           elevation: 0,
           centerTitle: true,
           backgroundColor: Colors.orange,
-          title: Text("SAMDI'S SPECIALS "),
+          title: Text("APPBAR".tr),
         ),
         body: SingleChildScrollView(
           child: Padding(
@@ -24,7 +41,7 @@ class HomePage extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      "Nepal",
+                      "NEPAL".tr,
                       style:
                           TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     ),
@@ -47,101 +64,112 @@ class HomePage extends StatelessWidget {
                     )
                   ],
                 ),
-                SizedBox(height: 20,),
+                SizedBox(
+                  height: 20,
+                ),
                 CarouselSlider(
                   items: [
-                    Stack(
-                      alignment: Alignment(0.1, 0.7),
-                      children: [
-                        Stack(
-                          children: [
-                            Container(
-                              height: 250,
-                              color: Colors.white,
-                              // decoration: BoxDecoration(
-                              //     image: DecorationImage(
-                              //   image: AssetImage('assets/images/glasses.png'),
-                              // )),
-                            ),
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(10),
-                              child: Container(
-                                height: 150,
-                                decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                  image: AssetImage('assets/images/burger.png'),
-                                  fit: BoxFit.cover,
-                                )),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (builder) => Burger()));
+                      },
+                      child: Stack(
+                        alignment: Alignment(0.1, 0.7),
+                        children: [
+                          Stack(
+                            children: [
+                              Container(
+                                height: 250,
+                                color: Colors.white,
+                                // decoration: BoxDecoration(
+                                //     image: DecorationImage(
+                                //   image: AssetImage('assets/images/glasses.png'),
+                                // )),
                               ),
-                            ),
-                          ],
-                        ),
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(20),
-                          child: Container(
-                            width: 240,
-                            height: 110,
-                            color: Color.fromARGB(255, 238, 191, 120),
-                            child: Padding(
-                              padding: const EdgeInsets.all(15.0),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const Text(
-                                    "Burger ",
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  Row(
-                                    children: [
-                                      Icon(Icons.star,
-                                          size: 10, color: Colors.green),
-                                      Icon(Icons.star,
-                                          size: 10, color: Colors.green),
-                                      Icon(Icons.star,
-                                          size: 10, color: Colors.green),
-                                      SizedBox(
-                                        width: 20,
-                                      ),
-                                      Text("4.5    "),
-                                      Text("2001 Comments"),
-                                    ],
-                                  ),
-                                  const SizedBox(
-                                    height: 20,
-                                  ),
-                                  Row(
-                                    children: [
-                                      CircleAvatar(
-                                        radius: 5,
-                                        backgroundColor: Colors.yellow,
-                                      ),
-                                      Text(
-                                        "Normal",
-                                        style: TextStyle(color: Colors.green),
-                                      ),
-                                      SizedBox(
-                                        width: 10,
-                                      ),
-                                      Icon(Icons.location_on,
-                                          color: Colors.grey),
-                                      Text("1.5 KM"),
-                                      SizedBox(
-                                        width: 5,
-                                      ),
-                                      Icon(Icons.timer),
-                                      Text("32 min"),
-                                    ],
-                                  )
-                                ],
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: Container(
+                                  height: 150,
+                                  decoration: BoxDecoration(
+                                      image: DecorationImage(
+                                    image:
+                                        AssetImage('assets/images/burger.png'),
+                                    fit: BoxFit.cover,
+                                  )),
+                                ),
                               ),
-                            ),
+                            ],
                           ),
-                        )
-                      ],
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(20),
+                            child: Container(
+                              width: 240,
+                              height: 110,
+                              color: Color.fromARGB(255, 238, 191, 120),
+                              child: Padding(
+                                padding: const EdgeInsets.all(15.0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "BURGER".tr,
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    Row(
+                                      children: [
+                                        Icon(Icons.star,
+                                            size: 10, color: Colors.green),
+                                        Icon(Icons.star,
+                                            size: 10, color: Colors.green),
+                                        Icon(Icons.star,
+                                            size: 10, color: Colors.green),
+                                        SizedBox(
+                                          width: 20,
+                                        ),
+                                        Text("4.5    "),
+                                        Text("CMT".tr),
+                                      ],
+                                    ),
+                                    const SizedBox(
+                                      height: 10,
+                                    ),
+                                    Row(
+                                      children: [
+                                        CircleAvatar(
+                                          radius: 5,
+                                          backgroundColor: Colors.yellow,
+                                        ),
+                                        Text(
+                                          "NORMAL".tr,
+                                          style: TextStyle(color: Colors.green),
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Icon(Icons.location_on,
+                                            color: Colors.grey),
+                                        Text("1.5 "),
+                                        Text("KM".tr),
+                                        SizedBox(
+                                          width: 5,
+                                        ),
+                                        Icon(Icons.timer),
+                                        Text("32 "),
+                                        Text("MIN".tr),
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
                     ),
-                   Stack(
+                    Stack(
                       alignment: Alignment(0.1, 0.7),
                       children: [
                         Stack(
@@ -196,11 +224,13 @@ class HomePage extends StatelessWidget {
                                         width: 20,
                                       ),
                                       Text("2.5    "),
-                                      Text("201 Comments"),
+                                      Text("KM".tr),
+                                      Text("201 "),
+                                      Text("CMT".tr),
                                     ],
                                   ),
                                   const SizedBox(
-                                    height: 20,
+                                    height: 10,
                                   ),
                                   Row(
                                     children: [
@@ -217,12 +247,14 @@ class HomePage extends StatelessWidget {
                                       ),
                                       Icon(Icons.location_on,
                                           color: Colors.grey),
-                                      Text("0.5 KM"),
+                                      Text("0.5 "),
+                                      Text("KM".tr),
                                       SizedBox(
                                         width: 5,
                                       ),
                                       Icon(Icons.timer),
-                                      Text("15 min"),
+                                      Text("15 "),
+                                      Text("MIN".tr),
                                     ],
                                   )
                                 ],
@@ -251,7 +283,8 @@ class HomePage extends StatelessWidget {
                                 height: 150,
                                 decoration: BoxDecoration(
                                     image: DecorationImage(
-                                  image: AssetImage('assets/images/chawmin.jpeg'),
+                                  image:
+                                      AssetImage('assets/images/chawmin.jpeg'),
                                   fit: BoxFit.cover,
                                 )),
                               ),
@@ -287,11 +320,12 @@ class HomePage extends StatelessWidget {
                                         width: 20,
                                       ),
                                       Text("4.5    "),
-                                      Text("2001 Comments"),
+                                      Text("2001 "),
+                                      Text("CMT".tr),
                                     ],
                                   ),
                                   const SizedBox(
-                                    height: 20,
+                                    height: 10,
                                   ),
                                   Row(
                                     children: [
@@ -300,7 +334,7 @@ class HomePage extends StatelessWidget {
                                         backgroundColor: Colors.yellow,
                                       ),
                                       Text(
-                                        "Normal",
+                                        "NORMAl".tr,
                                         style: TextStyle(color: Colors.green),
                                       ),
                                       SizedBox(
@@ -308,12 +342,14 @@ class HomePage extends StatelessWidget {
                                       ),
                                       Icon(Icons.location_on,
                                           color: Colors.grey),
-                                      Text("1.5 KM"),
+                                      Text("1.5 "),
+                                      Text("KM".tr),
                                       SizedBox(
                                         width: 5,
                                       ),
                                       Icon(Icons.timer),
-                                      Text("32 min"),
+                                      Text("32 "),
+                                      Text("MIN".tr),
                                     ],
                                   )
                                 ],
@@ -378,7 +414,8 @@ class HomePage extends StatelessWidget {
                                         width: 20,
                                       ),
                                       Text("1.5    "),
-                                      Text("2501 Comments"),
+                                      Text("2501 "),
+                                      Text("CMT".tr),
                                     ],
                                   ),
                                   const SizedBox(
@@ -399,12 +436,14 @@ class HomePage extends StatelessWidget {
                                       ),
                                       Icon(Icons.location_on,
                                           color: Colors.grey),
-                                      Text("1.5 KM"),
+                                      Text("1.5 "),
+                                      Text("KM".tr),
                                       SizedBox(
                                         width: 5,
                                       ),
                                       Icon(Icons.timer),
-                                      Text("32 min"),
+                                      Text("32 "),
+                                      Text("MIN".tr)
                                     ],
                                   )
                                 ],
@@ -426,14 +465,14 @@ class HomePage extends StatelessWidget {
                     viewportFraction: 0.8,
                   ),
                 ),
-              SizedBox(height: 20,),
-
+                SizedBox(
+                  height: 20,
+                ),
                 PopularFood(),
-
+                Text("burger price=${data}"),
               ],
             ),
           ),
-
         )
 
         // Container(
