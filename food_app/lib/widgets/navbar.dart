@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:food_app/views/homepage.dart';
 // import 'package:food_app/views/map.dart';
 import 'package:food_app/views/mapscreen.dart';
+import 'package:food_app/views/profile.dart';
 // import 'package:food_app/views/osm.dart';
 
 class NavBar extends StatefulWidget {
@@ -20,10 +21,7 @@ class _NavBarState extends State<NavBar> {
     // MapScreen(),
     // Osm(),
     PrabeshMap(),
-    Text(
-      'Profile',
-      style: optionStyle,
-    ),
+    Profile(),
   ];
 
   void _onItemTapped(int index) {
